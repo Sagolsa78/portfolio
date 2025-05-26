@@ -1,7 +1,7 @@
 import { FaGithub } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { CiLinkedin } from "react-icons/ci";
-import { useRef } from "react";
+
 
 
 
@@ -10,6 +10,7 @@ import { useRef } from "react";
 import  { useEffect, useState } from "react";
 
 import { motion, AnimatePresence } from 'framer-motion';
+import { scrollToSection } from "./Navbar";
 
 function Hero() {
 
@@ -25,15 +26,13 @@ function Hero() {
     }, [words.length])
 
 
-    const ProjectsRef =useRef(null);
-
 
     return (
 
-        <div className="mx-auto container  px-6 py-20 mb-50 mt-50 flex " >
+        <div className="mx-auto bg-black  text-white container px-6 py-20 mb-50 mt-50 flex " >
             <div className="flex">
                 <div className="aspect-square rounded-full text-amber-600 overflow-hidden border-6 border-b-fuchsia-600 ">
-                    <img src="/src/assets/sahani_image.jpeg" alt="profile _image" className="h-full w-full" />
+                    <img src="/src/assets/My _PhotoGraph.jpeg" alt="profile _image" className="h-96" />
                 </div>
                 <div className="pl-10">
                     <div className="  pl-30">
@@ -71,16 +70,14 @@ function Hero() {
                             <a href="https://www.linkedin.com/in/sahani78/ "> <CiLinkedin /></a>
                         </div>
                         <div className="flex flex-col-2  ">
-                            <a href="#projects" className=""> <button className="text-xl font-semibold item-center w-44 h-12  rounded-full text-white  bg-gradient-to-r from-purple-500 to-pink-500">
+                            <a href="#projects"  onClick={(e)=>scrollToSection(e,"#Projects")}>
+                                <button className="text-xl font-semibold item-center w-44 h-12 hover:cursor-pointer rounded-full text-white  bg-gradient-to-r from-purple-500 to-pink-500">
                                 Projects
 
 
                             </button></a>
-                            <a href="" className="pl-4"><button className="text-xl flex     pl-8  items-center font-bold item-center w-62 h-12  rounded-full text-gray-500  border-4    border-purple-500 ">
-                                {/* <SlCalender className=""/> */}
+                            <a href="https://calendly.com/sahanimohit5ed/30min" className="pl-4"><button className="text-xl flex  font-serif   pl-8  items-center font-semibold item-center w-52 hover:cursor-pointer h-12  rounded-full text-gray-500  border-3   border-purple-500 ">
                                 Schedule A Meet
-
-
                             </button></a>
                         </div>
 

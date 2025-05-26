@@ -30,7 +30,7 @@ const skillsData = {
 function Skills() {
     return (
         <>
-            <section className="py-12 dark:bg-gradient-to-b dark:from-black dark:to-gray-900  " id="skills">
+            <section className="py-12  bg-gradient-to-b  from-black  to-gray-900  " id="skills">
                 <div className="container px-4 mx-auto ">
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -50,7 +50,7 @@ function Skills() {
 
                         <div className="grid grid-cols-1 md:grid-cols-3  gap-8">
                             {Object.entries(skillsData).map(([category, skills]) => (
-                                <div key={category} className="p-6 bg-gray-900/50  rounded-xl backdrop-blur-sm border border-gray-800">
+                                <div key={category} className="p-6  bg-gray-900/50 bg-gray-200 rounded-xl backdrop-blur-sm border border-gray-800">
                                     <h4 className="text-xl font-bold mb-4 text-purple-400 text-center md:text-left ">{category}</h4>
                                     {skills.map((skill) => (
                                         <SkillBar key={skill.name} name={skill.name} proficiency={skill.proficiency} />
@@ -70,8 +70,8 @@ function SkillBar({ name, proficiency }:{name:string; proficiency:number}) {
     return (
         <div className="mb-4">
             <div className="flex justify-between mb-1">
-                <span className="text-gray-300">{name}</span>
-                <span className="text-gray-400">{proficiency}%</span>
+                <span className=" text-gray-300">{name}</span>
+                <span className=" text-gray-800">{proficiency}%</span>
             </div>
             <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
                 <motion.div

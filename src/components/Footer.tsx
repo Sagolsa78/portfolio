@@ -7,7 +7,7 @@ import { CiLinkedin } from "react-icons/ci";
 function Footer() {
     return (
         <>
-            <footer className="py-8 dark:bg-gradient-to-b dark:from-gray-900 dark:to-black bg-white bg-gradient-to-t from-gray-400 to-gray-700">
+            <footer className="py-8  bg-gradient-to-b  from-gray-900  to-black bg-white text-white ">
                 <div className="container px-4 mx-auto">
                     <div className="flex text-2xl flex-wrap justify-center gap-8 mb-8">
                         <a href="https://github.com/sagolsa78"><FaGithub className="" /></a>
@@ -15,7 +15,7 @@ function Footer() {
                         <a href="https://www.linkedin.com/in/sahani78/ "> <CiLinkedin /></a>
                     </div>
                 </div>
-                <div className="text-center text-gray-500 text-sm ">
+                <div className="text-center   text-gray-500 text-sm ">
                     <p>© {new Date().getFullYear()} Mohit Sahani. All Rights Reserved.</p>
 
                     <ContactMail/>

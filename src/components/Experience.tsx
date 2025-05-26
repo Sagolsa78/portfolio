@@ -19,7 +19,7 @@ function Experience() {
     return (
 
         <>
-            <div className="py-20">
+            <div className="py-20 bg-black">
                 <div className="container px-4 mx-auto">
                     <motion.div
                         initial={{ opacity: 0 }}

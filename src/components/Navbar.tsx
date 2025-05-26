@@ -2,11 +2,19 @@ import { useEffect, useState } from "react";
 
 
 
+export const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, herf: string) => {
+  e.preventDefault()
+  const targetId = herf.replace("#", "")
+  const elem = document.getElementById(targetId)
+  elem?.scrollIntoView({ behavior: "smooth" })
 
-function Navbar() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+}
+
+
+export function Navbar() {
+  // const [isDarkMode, setIsDarkMode] = useState(true);
   const [scrolled, setScrolled] = useState(false);
-  const [isOpen,setIsOpen]=useState(false);
+
 
 
 
@@ -25,49 +33,42 @@ function Navbar() {
 
   }, [])
 
-  useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add('dark-mode')
+  // useEffect(() => {
+  //   if (isDarkMode) {
+  //     document.body.classList.add('dark-mode')
 
-    }
-    else {
-      document.body.classList.remove("dark-mode")
-    }
-  })
+  //   }
+  //   else {
+  //     document.body.classList.remove("dark-mode")
+  //   }
+  // })
 
 
 
-  const scrollToSection=(e:React.MouseEvent<HTMLAnchorElement>,herf:string)=>{
-    e.preventDefault()
-    const targetId=herf.replace("#","")
-    const elem =document.getElementById(targetId)
-    elem?.scrollIntoView({behavior:"smooth"})
-    setIsOpen(false)
-  }
 
 
 
 
   return (
-    <div className={` fixed top-0 right-0 left-0 z-50  h-15 justify-between flex transition-all duration-100 ${scrolled ? "bg-black/80  backdrop-blur-md  text-white" : "bg-transparent "} `}>
+    <div className={` fixed top-0 right-0 left-0 z-50  h-15 justify-between flex  text-white transition-all duration-100 ${scrolled ? "bg-gray bg-black/80  backdrop-blur-md  text-white" : "bg-transparent "} `}>
       <div className="container mx-auto px-4 flex justify-between">
-        <a href="Home" onClick={(e)=>scrollToSection(e,"#Home")} className=" text-2xl p-4 font-semibold font-sans bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500" >
+        <a href="Home" onClick={(e) => scrollToSection(e, "#Home")} className=" text-2xl p-4 font-semibold font-sans bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500" >
           Mohit Sahani
         </a>
         <div className="justify-between  flex p-4 pr-20">
           <div className=" pl-6 pr-4">
-            Home
+            <a href="Home" onClick={(e) => scrollToSection(e, "#Home")}>Home</a>
           </div>
           <div className="pl-6 pr-4">
-            About
+            <a href="About" onClick={(e) => scrollToSection(e, "#About")}>About</a>
           </div>
           <div className="pl-6 pr-4">
-            Projects
+            <a href="Projects" onClick={(e) => scrollToSection(e, "#Projects")}>Projects</a>
           </div>
           <div className="pl-6 pr-4">
-            Contacts
+            <a href="Contacts" onClick={(e) => scrollToSection(e, "#Contacts")}>Contacts</a>
           </div>
-          <div className="pl-6">
+          {/* <div className="pl-6">
             <label className="inline-flex items-center cursor-pointer">
               <input type="checkbox"
                 checked={isDarkMode}
@@ -84,7 +85,7 @@ function Navbar() {
 
 
 
-          </div>
+          </div> */}
         </div>
 
       </div>
@@ -93,4 +94,4 @@ function Navbar() {
 }
 
 
-export default Navbar;
+

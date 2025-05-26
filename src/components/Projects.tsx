@@ -129,7 +129,7 @@ const ProjectsData = [
 
 function Projects() {
   return (
-    <div id="Projects" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+    <div id="Projects" className="py-20 bg-gradient-to-b from-gray-400 to-gray  bg-gradient-to-b  from-gray-900  to-black">
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -197,7 +197,7 @@ function EnhancedProjectCard({
   return (
     <>
       <motion.div
-        className="rounded-lg bg-gray-900 border border-gray-800 hover:border-purple-500 transition-all duration-300 overflow-hidden h-full flex flex-col"
+        className="rounded-lg   bg-gray-900 border border-gray-800 hover:border-purple-500 transition-all duration-300 overflow-hidden h-full flex flex-col"
         whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(139, 92, 246, 0.3)" }}
       >
         <div className="h-48 overflow-hidden">{imageComponent}</div>

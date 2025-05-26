@@ -1,9 +1,18 @@
 import { motion } from "framer-motion";
 
+
+const handleSubmit=(e:any)=>{
+    e.preventDefault();
+    //logic
+
+    alert("Message Sent");
+
+}
+
 function Contact() {
     return (
         <>
-            <div className="py-20  bg-white dark:bg-gradient-to-b dark:from-black dark:to-gray-900 transition-colors duration-500">
+            <div id="Contacts" className="py-20  bg-white dark:bg-gradient-to-b dark:from-black dark:to-gray-900 transition-colors duration-500">
                 <div className="container px-4 mx-auto">
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -19,8 +28,8 @@ function Contact() {
                         </h2>
 
                         <div className="max-w-3xl mx-auto">
-                            <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
-                                <form className="space-y-6" action="#">
+                            <div className="bg-gray-300 dark:bg-gray-900 p-6 rounded-lg border border-gray-800">
+                                <form  onSubmit={handleSubmit} className="space-y-6" action="#">
                                     {/* Name */}
                                     <div>
                                         <label
@@ -31,6 +40,7 @@ function Contact() {
                                         </label>
                                         <input
                                             type="text"
+                                            required
                                             id="name"
                                             className="mt-1 block w-full rounded-md bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-black dark:text-white px-4 py-3"
                                         />
@@ -46,6 +56,7 @@ function Contact() {
                                         </label>
                                         <input
                                             type="email"
+                                            required
                                             id="email"
                                             className="mt-1 block w-full rounded-md bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-black dark:text-white px-4 py-3"
                                         />
@@ -61,6 +72,7 @@ function Contact() {
                                         </label>
                                         <textarea
                                             id="message"
+                                            required
                                             className="mt-1 block w-full rounded-md bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-black dark:text-white px-4 py-3"
                                             rows={5}
                                         ></textarea>
