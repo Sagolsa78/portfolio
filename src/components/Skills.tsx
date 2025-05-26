@@ -50,7 +50,7 @@ function Skills() {
 
                         <div className="grid grid-cols-1 md:grid-cols-3  gap-8">
                             {Object.entries(skillsData).map(([category, skills]) => (
-                                <div key={category} className="p-6  bg-gray-900/50 bg-gray-200 rounded-xl backdrop-blur-sm border border-gray-800">
+                                <div key={category} className="p-6  bg-gray-900/50 -xl backdrop-blur-sm border border-gray-800">
                                     <h4 className="text-xl font-bold mb-4 text-purple-400 text-center md:text-left ">{category}</h4>
                                     {skills.map((skill) => (
                                         <SkillBar key={skill.name} name={skill.name} proficiency={skill.proficiency} />

@@ -129,7 +129,7 @@ const ProjectsData = [
 
 function Projects() {
   return (
-    <div id="Projects" className="py-20 bg-gradient-to-b from-gray-400 to-gray  bg-gradient-to-b  from-gray-900  to-black">
+    <div id="Projects" className="py-20   bg-gradient-to-b  from-gray-900  to-black">
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
