@@ -1,37 +1,29 @@
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react"; // or any icon set you prefer
+import { useMenu } from "./MenuContext";
 
-
-
-export const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, herf: string) => {
-  e.preventDefault()
-  const targetId = herf.replace("#", "")
-  const elem = document.getElementById(targetId)
-  elem?.scrollIntoView({ behavior: "smooth" })
-
-}
-
+export const scrollToSection = (
+  e: React.MouseEvent<HTMLAnchorElement>,
+  href: string
+) => {
+  e.preventDefault();
+  const targetId = href.replace("#", "");
+  const elem = document.getElementById(targetId);
+  elem?.scrollIntoView({ behavior: "smooth" });
+};
 
 export function Navbar() {
-  // const [isDarkMode, setIsDarkMode] = useState(true);
   const [scrolled, setScrolled] = useState(false);
-
-
-
+  const {menuOpen, setMenuOpen} = useMenu();
+  // const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
-
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-
-  }, [])
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // useEffect(() => {
   //   if (isDarkMode) {
@@ -43,32 +35,69 @@ export function Navbar() {
   //   }
   // })
 
-
-
-
-
-
+  const navLinks = (
+    <>
+      <a
+        href="#Home"
+        onClick={(e) => scrollToSection(e, "#Home")}
+        className="block py-2 px-4 hover:text-pink-400"
+      >
+        Home
+      </a>
+      <a
+        href="#About"
+        onClick={(e) => scrollToSection(e, "#About")}
+        className="block py-2 px-4 hover:text-pink-400"
+      >
+        About
+      </a>
+      <a
+        href="#Projects"
+        onClick={(e) => scrollToSection(e, "#Projects")}
+        className="block py-2 px-4 hover:text-pink-400"
+      >
+        Projects
+      </a>
+      <a
+        href="#Contacts"
+        onClick={(e) => scrollToSection(e, "#Contacts")}
+        className="block py-2 px-4 hover:text-pink-400"
+      >
+        Contacts
+      </a>
+    </>
+  );
 
   return (
-    <div className={` fixed top-0 right-0 left-0 z-50  h-15 justify-between flex  text-white transition-all duration-100 ${scrolled ? "bg-gray bg-black/80  backdrop-blur-md  text-white" : "bg-transparent "} `}>
-      <div className="container mx-auto px-4 flex justify-between">
-        <a href="Home" onClick={(e) => scrollToSection(e, "#Home")} className=" text-2xl p-4 font-semibold font-sans bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500" >
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? "bg-black/80 backdrop-blur-md shadow-md"
+          : "bg-transparent"
+        }`}
+    >
+      <div className="container mx-auto flex justify-between items-center px-4 py-3">
+        <a
+          href="#Home"
+          onClick={(e) => scrollToSection(e, "#Home")}
+          className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500"
+        >
           Mohit Sahani
         </a>
-        <div className="justify-between  flex p-4 pr-20">
-          <div className=" pl-6 pr-4">
-            <a href="Home" onClick={(e) => scrollToSection(e, "#Home")}>Home</a>
-          </div>
-          <div className="pl-6 pr-4">
-            <a href="About" onClick={(e) => scrollToSection(e, "#About")}>About</a>
-          </div>
-          <div className="pl-6 pr-4">
-            <a href="Projects" onClick={(e) => scrollToSection(e, "#Projects")}>Projects</a>
-          </div>
-          <div className="pl-6 pr-4">
-            <a href="Contacts" onClick={(e) => scrollToSection(e, "#Contacts")}>Contacts</a>
-          </div>
-          {/* <div className="pl-6">
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex space-x-6 text-white font-medium">
+          {navLinks}
+        </nav>
+
+        {/* Mobile Menu Icon */}
+        <div className="md:hidden">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-white">
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+      </div>
+
+      {/* <div className="pl-6">
             <label className="inline-flex items-center cursor-pointer">
               <input type="checkbox"
                 checked={isDarkMode}
@@ -86,12 +115,16 @@ export function Navbar() {
 
 
           </div> */}
+
+      {/* Mobile Dropdown Menu */}
+      {menuOpen && (
+        <div className={`md:hidden bg-black/90  px-4 pb-4 text-white ${scrolled
+          ? "bg-black/80 backdrop-blur-md  "
+          : " backdrop-blur-md shadow-md"
+        }`}>
+          <nav className="flex flex-col space-y-2">{navLinks}</nav>
         </div>
-
-      </div>
-    </div>
-  )
+      )}
+    </header>
+  );
 }
-
-
-

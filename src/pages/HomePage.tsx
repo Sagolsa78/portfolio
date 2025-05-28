@@ -2,21 +2,24 @@ import Contact from "../components/Contact";
 import Experience from "../components/Experience";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
-import {Navbar} from "../components/Navbar";
+import { MenuProvider } from "../components/MenuContext";
+import { Navbar } from "../components/Navbar";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 
-function HomePage(){
+function HomePage() {
 
-    return(
+    return (
         <div id="Home" className=" bg-black min-h-screen overflow-hidden">
-            <Navbar/>
-            <Hero/>
-            <Skills/>
-            <Projects/>
-            <Experience/>
-            <Contact/>
-            <Footer/>
+            <MenuProvider>
+                <Navbar />
+                <Hero />
+            </MenuProvider>
+            <Skills />
+            <Projects />
+            <Experience />
+            <Contact />
+            <Footer />
 
         </div>
     )
