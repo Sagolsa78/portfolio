@@ -53,7 +53,7 @@ A clean, responsive developer portfolio showcasing my projects, skills, achievem
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/Sagolsa78/portfolio.git
 cd portfolio
 
 npm install
