@@ -9,8 +9,7 @@ A clean, responsive developer portfolio showcasing my projects, skills, achievem
 [Live Link](https://myportfolio-two-delta-35.vercel.app)
 
 
-🔗 [App ScreenShot](Projects/Portfolio/frontend/public/image.png)
-
+🔗 [App ScreenShot](/public/image.png)
 
 
 ---
