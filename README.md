@@ -1,55 +1,78 @@
-# React + TypeScript + Vite
+# 💼 Mohit Sahani – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, responsive developer portfolio showcasing my projects, skills, achievements, and contact details. Built using **React** and **Tailwind CSS**, and deployed on **Vercel**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## Expanding the ESLint configuration
+[Live Link](https://myportfolio-two-delta-35.vercel.app)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+🔗 [App ScreenShot](Projects/Portfolio/frontend/public/image.png)
+
+
+
+---
+
+## 📌 Features
+
+- 📄 About Me section with education & background
+- 🛠️ Projects section linking to GitHub repos
+- 🏆 Achievements & hackathon contributions
+- 💬 Contact form or social links
+- ⚡ Smooth UI interactions with responsive layout
+- 🧠 Tech stack & tools display
+- 📱 Mobile-first responsive design
+
+---
+
+## 🚀 Tech Stack
+
+- **Framework**: React
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion (if used)
+- **Deployment**: Vercel
+- **Icons**: React Icons or FontAwesome
+
+---
+
+
+
+
+---
+
+## 🧭 Navigation
+
+- **/about** – Short intro, education, and background
+- **/projects** – Cards linking to GitHub repositories
+- **/skills** – Logos and names of tools/frameworks
+- **/contact** – Email, LinkedIn, GitHub links
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
+
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛡️ License
+This project is licensed under the MIT License.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-#Portfolio Web site
+ ## 👨‍💻 Author
+
+Mohit Sahani
+📧 Email: sahanimohit5ed@gmail.com
+
+🔗 Portfolio: myportfolio-two-delta-35.vercel.app
+
+🐙 GitHub: @Sagolsa78
+
+🔗 LinkedIn: linkedin.com/in/sahani78
+
