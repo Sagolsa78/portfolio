@@ -11,12 +11,12 @@ const ProjectsData = [
     tags: ["React", "Tailwind", "Portfolio"],
     imageComponent: (
       <img
-        src="/assets/sahani_image.jpeg"
+        src="/public/image.png"
         alt="Portfolio"
         className="w-full h-full object-cover"
       />
     ),
-    link: "https://youtube.com",
+    // link: "",
     githubLink: "https://github.com/sagolsa78/Portfolio",
     technologies: ["React", "Tailwind CSS", "Vercel"],
     features: ["Responsive Design", "Dark Mode", "Smooth Scroll"],
@@ -29,12 +29,12 @@ const ProjectsData = [
     tags: ["React", "WebSocket", "Node.js"],
     imageComponent: (
       <img
-        src="/images/event_notification.png"
+        src="/public/Event_image.png"
         alt="Event Notification System"
         className="w-full h-full object-cover"
       />
     ),
-    link: "https://eventapp.example.com",
+    // link: "",
     githubLink: "https://github.com/Sagolsa78/Event_Notification",
     technologies: [
       "React",
@@ -58,12 +58,12 @@ const ProjectsData = [
     tags: ["React", "UI Clone", "Tailwind CSS"],
     imageComponent: (
       <img
-        src="/images/paytm_clone.png"
+        src="/public/Paytm_clone.png"
         alt="Paytm Clone"
         className="w-full h-full object-cover"
       />
     ),
-    link: "https://paytmclone.example.com",
+    // link: "",
     githubLink: "https://github.com/Sagolsa78/YouTube_Clone_Frontend",
     technologies: ["React", "Node.js", "Express", "Mongoose", "Tailwind CSS"],
     features: [
@@ -80,12 +80,12 @@ const ProjectsData = [
     tags: ["React", "YouTube Clone", "Tailwind CSS"],
     imageComponent: (
       <img
-        src="/images/youtube_clone.png"
+        src=""
         alt="YouTube Frontend Clone"
         className="w-full h-full object-cover"
       />
     ),
-    link: "https://youtubeclone.example.com",
+    // link: "",
     githubLink: "https://github.com/Sagolsa78/YouTube_Clone_Frontend",
     technologies: ["React", "Tailwind CSS"],
     features: [
@@ -108,8 +108,8 @@ const ProjectsData = [
         className="w-full h-full object-cover"
       />
     ),
-    link: "https://aitextsummarizer.example.com",
-    githubLink: "https://github.com/yourusername/ai-text-summarizer",
+    // link: "",
+    githubLink: "https://github.com/Sagolsa78/",
     technologies: [
       "React",
       "Node.js",
@@ -152,7 +152,7 @@ function Projects() {
                 longDescription={project.longDescription}
                 tags={project.tags}
                 imageComponent={project.imageComponent}
-                link={project.link}
+                // link={project.link}
                 githubLink={project.githubLink}
                 technologies={project.technologies}
                 features={project.features}
@@ -171,7 +171,7 @@ interface EnhancedProjectCardProps {
   description:string;
   tags:string[];
   imageComponent:React.ReactNode;
-  link:string;
+  // link:string;
   githubLink:string;
   longDescription:string;
   technologies:string[];
@@ -186,7 +186,7 @@ function EnhancedProjectCard({
   description,
   tags,
   imageComponent,
-  link,
+  // link,
   githubLink,
   longDescription,
   technologies,
@@ -303,7 +303,7 @@ function EnhancedProjectCard({
               </div>
 
               <div className="flex gap-4 mt-8">
-                <a
+                {/* <a
                   href={link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -311,7 +311,7 @@ function EnhancedProjectCard({
                 >
                   <span>View Live Project</span>
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+                </a> */}
                 <a
                   href={githubLink}
                   target="_blank"
