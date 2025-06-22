@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 const handleSubmit=(e:any)=>{
     e.preventDefault();
-    //logic
+      
+    
 
     alert("Message Sent");
 

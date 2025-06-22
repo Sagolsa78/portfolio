@@ -14,7 +14,7 @@ export const scrollToSection = (
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const {menuOpen, setMenuOpen} = useMenu();
+  const { menuOpen, setMenuOpen } = useMenu();
   // const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
@@ -65,14 +65,19 @@ export function Navbar() {
       >
         Contacts
       </a>
+      <a href="/Mohit_Resume31-05-24.pdf" target="_blank"  >
+        <button className="w-36 h-10 text-white  font-semibold hover:cursor-pointer rounded bg-gradient-to-r from-blue-500 to-red-500">
+          Resume
+        </button>
+      </a>
     </>
   );
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-black/80 backdrop-blur-md shadow-md"
-          : "bg-transparent"
+        ? "bg-black/80 backdrop-blur-md shadow-md"
+        : "bg-transparent"
         }`}
     >
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
@@ -121,7 +126,7 @@ export function Navbar() {
         <div className={`md:hidden bg-black/90  px-4 pb-4 text-white ${scrolled
           ? "bg-black/80 backdrop-blur-md  "
           : " backdrop-blur-md shadow-md"
-        }`}>
+          }`}>
           <nav className="flex flex-col space-y-2">{navLinks}</nav>
         </div>
       )}

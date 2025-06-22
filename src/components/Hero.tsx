@@ -75,12 +75,12 @@ function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a href="#projects" onClick={(e) => scrollToSection(e, "#Projects")}>
-              <button className="w-44 h-12 text-white  font-semibold rounded-full bg-gradient-to-r from-purple-500 to-pink-500">
+              <button className="w-44 h-12 text-white  font-semibold  hover:cursor-pointer  rounded-full bg-gradient-to-r from-purple-500 to-pink-500">
                 Projects
               </button>
             </a>
             <a href="https://calendly.com/sahanimohit5ed/30min">
-              <button className="w-52 h-12 border border-purple-500 text-gray-400 font-semibold rounded-full">
+              <button className="w-52 h-12 border border-purple-500 hover:cursor-pointer text-gray-400 font-semibold rounded-full">
                 Schedule A Meet
               </button>
             </a>

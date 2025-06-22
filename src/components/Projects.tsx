@@ -11,7 +11,7 @@ const ProjectsData = [
     tags: ["React", "Tailwind", "Portfolio"],
     imageComponent: (
       <img
-        src="/public/image.png"
+        src="/image.png"
         alt="Portfolio"
         className="w-full h-full object-cover"
       />
@@ -29,7 +29,7 @@ const ProjectsData = [
     tags: ["React", "WebSocket", "Node.js"],
     imageComponent: (
       <img
-        src="/public/Event_image.png"
+        src="/Event_image.png"
         alt="Event Notification System"
         className="w-full h-full object-cover"
       />
@@ -58,7 +58,7 @@ const ProjectsData = [
     tags: ["React", "UI Clone", "Tailwind CSS"],
     imageComponent: (
       <img
-        src="/public/Paytm_clone.png"
+        src="/Paytm_clone.png"
         alt="Paytm Clone"
         className="w-full h-full object-cover"
       />
@@ -103,7 +103,7 @@ const ProjectsData = [
     tags: ["React", "AI", "API"],
     imageComponent: (
       <img
-        src="/images/ai_summarizer.png"
+        src="/ai_summarizer.png"
         alt="AI Text Summarizer App"
         className="w-full h-full object-cover"
       />
